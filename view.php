@@ -1,8 +1,6 @@
 <?php include("protect.php"); ?>
 <?php include("../global/includes/config.inc"); ?>
 <?php include("../global/includes/dbconnect.inc.php"); ?>
-
-
 <?php  // View inventory item : Gather this car's full info and populate the fields with their respective values
 if (isset($_GET['pid'])) {
 	$targetID = $_GET['pid'];
