@@ -1,6 +1,6 @@
 <?php include("protect.php"); ?>
-<?php include("../global/includes/config.inc"); ?>
-<?php include("../global/includes/dbconnect.inc.php"); ?>
+<?php include("global/includes/config.inc"); ?>
+<?php include("global/includes/dbconnect.inc.php"); ?>
 <?php  // View inventory item : Gather this car's full info and populate the fields with their respective values
 if (isset($_GET['pid'])) {
 	$targetID = $_GET['pid'];
@@ -42,12 +42,12 @@ if (isset($_GET['pid'])) {
 <html>
 <head>
 <title><?php echo inquiryTitle ?></title>
-<?php include("../global/includes/head/head.inc"); ?>
+<?php include("global/includes/head.inc"); ?>
 <style>
-	@import url("../global/js/pikachoose/styles/bottom.css");
+	@import url("global/js/pikachoose/styles/bottom.css");
 </style>
 <script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
-<script type="text/javascript" src="../global/js/pikachoose/lib/jquery.pikachoose.js"></script>
+<script type="text/javascript" src="global/js/pikachoose/lib/jquery.pikachoose.js"></script>
 <script language="javascript">
 	$(document).ready(
 		function (){
@@ -59,11 +59,11 @@ if (isset($_GET['pid'])) {
 
 <div id="mainContainer" class="clearfix">
   <!-- BEGIN: HEADER & NAVIGATION -->
-  <?php include("../global/includes/header_data/header.htm"); ?>
+  <?php include("global/includes/header.htm"); ?>
   <!-- END: HEADER & NAVIGATION -->
   <div id="mainContent" class="clearfix">
     <!-- BEGIN: LEFT FRAME -->
- 	<?php include("../global/includes/left_frame_data/left_frame.htm"); ?>
+ 	<?php include("global/includes/left_frame.htm"); ?>
     <!-- END: LEFT FRAME -->
     <div id="rightContent">
  	<?php include("toolbar.inc.php"); ?>
@@ -86,7 +86,7 @@ if (isset($_GET['pid'])) {
 	if (!empty($img1)) {
 		echo "<ul id='pikame' class='jcarousel-skin-pika'>";
 		foreach ($imgfilename as $eachimg) { // Create an img tag and the filename for each value in the DB
-			echo "<li><a href='photos/$eachimg' target='_blank'><img src='http://www.personalautoshopper.org/inventory/photos/$eachimg' /></a><span>$eachimg</span></li>";
+			echo "<li><a href='photos/$eachimg' target='_blank'><img src='http://www.pencilmedia.com/labs/inventory/uploads/$eachimg' /></a><span>$eachimg</span></li>";
 			// BASIC Show each image name: echo "<span>$eachimg <br />";
 			// BASIC Show each link to full size image: echo "<a href='photos/$item' target='_blank'>View</a></span>";
 		}		
@@ -133,7 +133,7 @@ if (isset($_GET['pid'])) {
     </div>
     </div>
   <!-- BEGIN: FOOTER -->
-  <?php include("../global/includes/footer_data/footer.htm"); ?>
+  <?php include("global/includes/footer.htm"); ?>
   <!-- END: FOOTER -->
 </div>
 

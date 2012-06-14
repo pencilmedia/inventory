@@ -1,11 +1,11 @@
 <?php include("protect.php"); ?>
-<?php include("../global/includes/config.inc"); ?>
+<?php include("global/includes/config.inc"); ?>
           
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><?php echo inquiryTitle ?></title>
-<?php include("../global/includes/head/head.inc"); ?>
+<?php include("global/includes/head.inc"); ?>
 <script src="js/validation.js"></script>
 <style>
 
@@ -18,11 +18,11 @@
 
 <div id="mainContainer" class="clearfix">
   <!-- BEGIN: HEADER & NAVIGATION -->
-  <?php include("../global/includes/header_data/header.htm"); ?>
+  <?php include("global/includes/header.htm"); ?>
   <!-- END: HEADER & NAVIGATION -->
   <div id="mainContent" class="clearfix">
     <!-- BEGIN: LEFT FRAME -->
- 	<?php include("../global/includes/left_frame_data/left_frame.htm"); ?>
+ 	<?php include("global/includes/left_frame.htm"); ?>
     <!-- END: LEFT FRAME -->
     <div id="rightContent">
  	<?php include("toolbar.inc.php"); ?>
@@ -118,7 +118,7 @@
     </div>
     </div>
   <!-- BEGIN: FOOTER -->
-  <?php include("../global/includes/footer_data/footer.htm"); ?>
+  <?php include("global/includes/footer.htm"); ?>
   <!-- END: FOOTER -->
 </div>
 

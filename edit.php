@@ -1,6 +1,6 @@
 <?php include("protect.php"); ?>
-<?php include("../global/includes/config.inc"); ?>
-<?php include("../global/includes/dbconnect.inc.php"); ?>
+<?php include("global/includes/config.inc"); ?>
+<?php include("global/includes/dbconnect.inc.php"); ?>
 <?php
 	// Parse the form data and UPDATE inventory item
 	if (isset($_POST['make'])){
@@ -30,7 +30,7 @@
 		
 		if (array_key_exists('upload', $_POST)) {
 		  // define constant for upload folder
-		  define('UPLOAD_DIR', '/home/content/s/a/d/sadakian40/html/inventory/photos/');
+		  define('UPLOAD_DIR', '/home/content/r/a/l/ralphagarcia/html/labs/inventory/uploads/');
 		  // convert the maximum size to KB
 		  $max = number_format(MAX_FILE_SIZE/1024, 1).'KB';
 		  // create an array of permitted MIME types
@@ -153,18 +153,18 @@ if (isset($_GET['pid'])) {
 <html>
 <head>
 <title><?php echo inquiryTitle ?></title>
-<?php include("../global/includes/head/head.inc"); ?>
+<?php include("global/includes/head.inc"); ?>
 <script src="js/validation.js"></script>
 </head>
 <body id="auto_inventory" class="edit_details">
 
 <div id="mainContainer" class="clearfix">
   <!-- BEGIN: HEADER & NAVIGATION -->
-  <?php include("../global/includes/header_data/header.htm"); ?>
+  <?php include("global/includes/header.htm"); ?>
   <!-- END: HEADER & NAVIGATION -->
   <div id="mainContent" class="clearfix">
     <!-- BEGIN: LEFT FRAME -->
- 	<?php include("../global/includes/left_frame_data/left_frame.htm"); ?>
+ 	<?php include("global/includes/left_frame.htm"); ?>
     <!-- END: LEFT FRAME -->
     <div id="rightContent">
  	<?php include("toolbar.inc.php"); ?>
@@ -266,7 +266,7 @@ if (isset($_GET['pid'])) {
     </div>
     </div>
   <!-- BEGIN: FOOTER -->
-  <?php include("../global/includes/footer_data/footer.htm"); ?>
+  <?php include("global/includes/footer.htm"); ?>
   <!-- END: FOOTER -->
 </div>
 

@@ -4,7 +4,7 @@ define ('MAX_FILE_SIZE', 512000); // KB to MB - MAX UPLOAD = 500 MB
 
 if (array_key_exists('upload', $_POST)) {
   // define constant for upload folder
-  define('UPLOAD_DIR', '/home/content/s/a/d/sadakian40/html/inventory/photos/');
+  define('UPLOAD_DIR', '/home/content/r/a/l/ralphagarcia/html/labs/inventory/uploads/');
   // convert the maximum size to KB
   $max = number_format(MAX_FILE_SIZE/1024, 1).'KB';
   // create an array of permitted MIME types

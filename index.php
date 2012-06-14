@@ -1,6 +1,6 @@
 <?php include("protect.php"); ?>
-<?php include("includes/config.inc"); ?>
-<?php include("../global/includes/dbconnect.inc.php"); ?>
+<?php include("global/includes/config.inc"); ?>
+<?php include("global/includes/dbconnect.inc.php"); ?>
 <?php 
 	//Error Reporting
 	error_reporting(E_ALL ^ E_NOTICE);
@@ -24,7 +24,7 @@
 			
 		
 		foreach ($delete_filename as $file2delete) { // Create an img tag and the filename for each value in the DB
-			$picstodelete = ("/home/content/s/a/d/sadakian40/html/inventory/photos/$file2delete"); // Delete imgs from DB
+			$picstodelete = ("/home/content/r/a/l/ralphagarcia/html/labs/inventory/uploads/$file2delete"); // Delete imgs from DB
 			//echo "<p>".$picstodelete."</p>"; Uncomment this line to see which images will be deleted in browser
 			if (file_exists($picstodelete)) {
 				unlink($picstodelete);
@@ -41,14 +41,14 @@
 <html>
 <head>
 <title><?php echo inventoryTitle ?></title>
-<?php include("../global/includes/head/head.inc"); ?>
+<?php include("global/includes/head.inc"); ?>
 <style>
-	@import url("../global/css/scroller.css");
+	@import url("global/css/scroller.css");
 </style>
 <!-- Smooth Scroll http://www.smoothdivscroll.com/ -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
-<script src="../global/js/jquery/jquery.ui.widget.js"></script>
-<script src="../global/js/jquery/smoothDivScroll.js"></script>
+<script src="global/js/jquery/jquery.ui.widget.js"></script>
+<script src="global/js/jquery/smoothDivScroll.js"></script>
 <script>
        $(document).ready(
 	   	function() {
@@ -90,11 +90,11 @@ function startScroll() {
 <body id="auto_inventory" class="inventory_listings">
 <div id="mainContainer" class="clearfix">
   <!-- BEGIN: HEADER & NAVIGATION -->
-  <?php include("../global/includes/header_data/header.htm"); ?>
+  <?php include("global/includes/header.htm"); ?>
   <!-- END: HEADER & NAVIGATION -->
   <div id="mainContent" class="clearfix">
     <!-- BEGIN: LEFT FRAME -->
- 	<?php include("../global/includes/left_frame_data/left_frame.htm"); ?>
+ 	
     <!-- END: LEFT FRAME -->
     <div id="rightContent">
  		<?php 
@@ -148,7 +148,7 @@ function startScroll() {
 							<div class='scrollableArea' style='width: 1680px;'>";
 							
 						foreach ($imgfilename as $eachimg) { // Create an img tag and the filename for each value in the DB
-							echo "<img src='http://www.personalautoshopper.org/inventory/photos/$eachimg' />";
+							echo "<img src='http://www.pencilmedia.com/labs/inventory/uploads/$eachimg' />";
 						}
 						
 						// end photo thumbnail scroller
@@ -158,7 +158,7 @@ function startScroll() {
 						echo "<em class='photo_count'>" . $count . " photo(s)</em>";
 						
 					} else {
-						echo "<img src='http://www.personalautoshopper.org/global/media/img/no_photos.png' />";
+						echo "<img src='http://www.pencilmedia.com/labs/inventory/global/media/img/no_photos.png' />";
 					}
 						
 					
@@ -186,7 +186,7 @@ function startScroll() {
     </div>
   </div>
   <!-- BEGIN: FOOTER -->
-  <?php include("../global/includes/footer_data/footer.htm"); ?>
+  <?php include("global/includes/footer.htm"); ?>
   <!-- END: FOOTER -->
 </div>
 

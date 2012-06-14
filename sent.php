@@ -1,6 +1,6 @@
 <?php include("protect.php"); ?>
-<?php include("../global/includes/config.inc"); ?>
-<?php include("../global/includes/dbconnect.inc.php"); ?>
+<?php include("global/includes/config.inc"); ?>
+<?php include("global/includes/dbconnect.inc.php"); ?>
 <?php 
 //Error Reporting
 error_reporting(E_ALL ^ E_NOTICE);
@@ -10,12 +10,12 @@ ini_set('display_errors','1');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><?php echo inquiryTitle ?></title>
-<?php include("../global/includes/head/head.inc"); ?>
+<?php include("global/includes/head.inc"); ?>
 <style>
-	@import url("../global/js/pikachoose/styles/bottom.css");
+	@import url("global/js/pikachoose/styles/bottom.css");
 </style>
 <script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
-<script type="text/javascript" src="../global/js/pikachoose/lib/jquery.pikachoose.js"></script>
+<script type="text/javascript" src="global/js/pikachoose/lib/jquery.pikachoose.js"></script>
 <script language="javascript">
 	$(document).ready(
 		function (){
@@ -26,11 +26,11 @@ ini_set('display_errors','1');
 <body id="auto_inventory" class="added_inventory">
 <div id="mainContainer" class="clearfix">
   <!-- BEGIN: HEADER & NAVIGATION -->
-  <?php include("../global/includes/header_data/header.htm"); ?>
+  <?php include("global/includes/header.htm"); ?>
   <!-- END: HEADER & NAVIGATION -->
   <div id="mainContent" class="clearfix">
     <!-- BEGIN: LEFT FRAME -->
- 	<?php include("../global/includes/left_frame_data/left_frame.htm"); ?>
+ 	<?php include("global/includes/left_frame.htm"); ?>
     <!-- END: LEFT FRAME -->
     <div id="rightContent">
  	<?php 
@@ -86,7 +86,7 @@ ini_set('display_errors','1');
 	
 	if (array_key_exists('upload', $_POST)) {
 	  // define constant for upload folder
-	  define('UPLOAD_DIR', '/home/content/s/a/d/sadakian40/html/inventory/photos/');
+	  define('UPLOAD_DIR', '/home/content/r/a/l/ralphagarcia/html/labs/inventory/uploads/');
 	  // convert the maximum size to KB
 	  $max = number_format(MAX_FILE_SIZE/1024, 1).'KB';
 	  // create an array of permitted MIME types
@@ -175,7 +175,7 @@ ini_set('display_errors','1');
 			
 			echo "<div class='photo_uploaded'><h3>Photos for $year $make $model</h3><ul id='pikame' class='jcarousel-skin-pika'>";
 			foreach ($result as $item) {
-				echo "<li><a href='photos/$item' target='_blank'><img src='http://www.personalautoshopper.org/inventory/photos/$item' /></a><span>$item</span></li>";
+				echo "<li><a href='uploads/$item' target='_blank'><img src='http://www.pencilmedia.com/labs/inventory/uploads/$item' /></a><span>$item</span></li>";
 			}
 			echo "</ul></div>";
 		}
@@ -219,7 +219,7 @@ ini_set('display_errors','1');
     </div>
     </div>
   <!-- BEGIN: FOOTER -->
-  <?php include("../global/includes/footer_data/footer.htm"); ?>
+  <?php include("global/includes/footer.htm"); ?>
   <!-- END: FOOTER -->
 </div>
 
