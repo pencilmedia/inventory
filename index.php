@@ -1,5 +1,5 @@
 <?php include("protect.php"); ?>
-<?php include("../global/includes/config.inc"); ?>
+<?php include("includes/config.inc"); ?>
 <?php include("../global/includes/dbconnect.inc.php"); ?>
 <?php 
 	//Error Reporting
